@@ -1,224 +1,580 @@
-/* ── Reset and base ── */
-*, *::before, *::after { box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --luxury-black: #1a1a1a;
+    --vogue-gold: #c5a059;
+    --border-color: #e0e0e0;
+    --soft-gray: #757575;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #111;
-  background: #fff;
+    background-color: #f9f7f2; /* Απαλό εκρού / ivory */
+    background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px); /* Πολύ διακριτικές τελείες */
+    background-size: 40px 40px;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* ── Publication header ── */
-.site-header {
-  border-top: 4px solid #111;
-  border-bottom: 1px solid #ddd;
-  padding: 14px 24px;
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
+::selection {
+    background: rgba(197, 160, 89, 0.25);
+    color: #000;
 }
 
-.publication-name {
-  font-family: Georgia, serif;
-  font-size: 1.1em;
-  font-weight: bold;
-  margin: 0;
-  letter-spacing: -0.01em;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 80px;
+    background-color: #fff;
+    box-shadow: 0 0 100px rgba(0,0,0,0.8);
 }
 
-.section-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #888;
-  margin: 0;
+/* Header */
+.editorial-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f7f2; /* Το εκρού που βάλαμε */
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    /* Δημιουργία εσωτερικού πλαισίου */
 }
 
-/* ── Article layout ── */
-article {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 24px 60px;
+.editorial-header .container {
+    position: relative;
+    padding: 40px;
+    border: 1px solid rgba(197, 160, 89, 0.3); /* Ελαφρύ χρυσό περίγραμμα */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* ── Article header ── */
-.article-header {
-  padding: 36px 0 0;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 24px;
+/* Προσθήκη γωνιών (Corners) για "αέρα" παλιού περιοδικού */
+.editorial-header .container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--vogue-gold);
+    border-left: 2px solid var(--vogue-gold);
 }
 
-h1 {
-  font-size: 2.4em;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 0 0 14px;
-  letter-spacing: -0.025em;
+.editorial-header .container::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid var(--vogue-gold);
+    border-right: 2px solid var(--vogue-gold);
 }
 
-.deck {
-  font-size: 1.1em;
-  line-height: 1.5;
-  color: #444;
-  margin: 0 0 16px;
-  font-style: italic;
+.editorial-header {
+    background-color: #fff;
+    padding: 100px 0 60px 0;
+    text-align: center;
 }
 
-.byline {
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.05em;
-  color: #888;
-  margin: 0 0 20px;
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
 }
 
-/* ── Hero image ── */
-.hero {
-  margin: 0 -24px 28px;
+.main-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: var(--vogue-gold);
+    font-weight: 700; /* Αυτό το κάνει Bold */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Δίνει αέρα ανάμεσα στα γράμματα */
+    margin-top: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* Intro & Drop Cap */
+.editorial-intro {
+    padding: 80px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
 }
 
-.hero figcaption {
-  font-size: 0.8em;
-  color: #777;
-  line-height: 1.5;
-  padding: 8px 24px 0;
-  font-family: Arial, Helvetica, sans-serif;
+.drop-cap {
+    font-family: 'Playfair Display', serif;
+    float: left;
+    font-size: 4.2rem; /* Ελαφρώς πιο μικρό για να μην "φωνάζει" */
+    line-height: 0.8;
+    margin-top: 8px;    /* Το κατεβάζουμε λίγο για να ευθυγραμμιστεί με την κορυφή */
+    margin-right: 12px; /* Απόσταση από το υπόλοιπο κείμενο */
+    color: var(--vogue-gold);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.credit {
-  display: block;
-  color: #aaa;
-  margin-top: 2px;
+.keyword {
+    border-bottom: 1px dotted var(--vogue-gold);
+    cursor: help;
+    font-weight: 600;
 }
 
-/* ── Body text ── */
-section { margin-bottom: 8px; }
-
-p { margin: 0 0 22px; }
-
-.lead {
-  font-size: 1.05em;
-  font-weight: 600;
-  line-height: 1.7;
+.interactive-cards {
+    padding: 80px 0;
+    text-align: center;
 }
 
-h2 {
-  font-size: 1.25em;
-  font-weight: 700;
-  margin: 36px 0 10px;
-  padding-top: 28px;
-  border-top: 1px solid #e0e0e0;
-  letter-spacing: -0.01em;
+.cards-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-a {
-  color: #111;
-  text-underline-offset: 3px;
+.impact-card {
+    background: #fff;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    width: 280px;
+    padding: 40px 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-/* ── Pull quote ── */
-.pull-quote {
-  border-top: 2px solid #111;
-  border-bottom: 2px solid #111;
-  margin: 32px 0;
-  padding: 20px 0;
-  text-align: center;
+.impact-card i {
+    font-size: 2.5rem;
+    color: var(--vogue-gold);
+    margin-bottom: 20px;
+    transition: 0.3s;
 }
 
-.pull-quote p {
-  font-size: 1.3em;
-  line-height: 1.4;
-  font-style: italic;
-  margin: 0 0 12px;
-  letter-spacing: -0.01em;
+.impact-card h4 {
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.pull-quote footer {
-  font-size: 0.82em;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.05em;
-  color: #666;
+.hover-text {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--vogue-gold);
+    /* ΑΛΛΑΓΗ: Σκούρο χρώμα γραμμάτων για τέλεια αντίθεση με το χρυσό */
+    color: #1a1a1a; 
+    padding: 30px; /* Περισσότερο κενό γύρω από το κείμενο */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Κεντράρισμα κειμένου */
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    font-size: 1rem;
+    font-weight: 700; /* Bold για να "γράφει" καλά */
+    line-height: 1.5;
+    box-sizing: border-box; /* Για να μην ξεφεύγει το padding */
 }
 
-/* ── Fact box ── */
-.fact-box {
-  background: #f7f5ef;
-  border-left: 3px solid #111;
-  padding: 16px 20px;
-  margin: 28px 0;
+.data-pulse-center {
+    padding: 100px 0;
+    background: #1a1a1a; /* Μαύρο για να κάνει δυνατό contrast */
+    color: var(--vogue-gold);
+    text-align: center;
+    overflow: hidden;
 }
 
-.fact-box-title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #555;
-  margin: 0 0 10px;
+.pulse-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.fact-box ul {
-  margin: 0;
-  padding-left: 18px;
-  font-size: 0.92em;
-  line-height: 1.65;
+/* Το εφέ του Radar */
+.radar-circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--vogue-gold);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: radar-pulse 2s infinite;
+    opacity: 0;
 }
 
-.fact-box li { margin-bottom: 5px; }
-
-/* ── Embeds ── */
-figure {
-  margin: 24px 0;
+@keyframes radar-pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
 }
 
-figure iframe {
-  display: block;
+.stats-live {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
 }
 
-figcaption {
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 6px;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+.stat-box {
+    flex: 1;
 }
 
-/* ── Article footer ── */
-.article-footer {
-  border-top: 1px solid #e0e0e0;
-  margin-top: 40px;
-  padding-top: 18px;
-  font-size: 0.83em;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #888;
+.counter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    display: block;
 }
 
-.tags a {
-  color: #555;
-  text-decoration: none;
+.stat-box p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: #888;
 }
 
-.tags a:hover { text-decoration: underline; }
 
-.corrections { margin-top: 8px; color: #bbb; }
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(197, 160, 89, 0.6);
+}
 
-/* ── Page footer ── */
-.page-footer {
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  padding: 28px 24px;
-  font-size: 13px;
-  color: #bbb;
-  font-family: Arial, Helvetica, sans-serif;
+.impact-card:hover .hover-text {
+    top: 0; /* Εμφανίζεται με slide up */
+}
+
+.impact-card:hover i {
+    opacity: 0; /* Κρύβει το εικονίδιο για να φανεί το κείμενο */
+}
+
+/* Executive Summary */
+.executive-summary { padding: 40px 0; margin-bottom: 40px; }
+.summary-box { border-top: 3px solid var(--vogue-gold); padding: 40px; background: #fcfcfc; }
+.summary-tag { color: var(--vogue-gold); letter-spacing: 3px; font-size: 0.7rem; display: block; text-align: center; text-transform: uppercase; }
+.summary-header h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; text-align: center; margin: 10px 0 30px; }
+.summary-list { list-style: none; max-width: 850px; margin: 0 auto; }
+.summary-list li { margin-bottom: 20px; padding-left: 30px; position: relative; font-size: 1rem; }
+.summary-list li::before { content: "•"; position: absolute; left: 0; color: var(--vogue-gold); font-size: 1.5rem; }
+
+/* Analysis Paragraphs */
+.editorial-analysis { background: #f9f9f9; padding: 40px; border-left: 2px solid var(--vogue-gold); margin: 40px 0; }
+.editorial-analysis p { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; text-align: justify; }
+
+/* Pillars & Titles */
+/* Ο τίτλος του Πυλώνα με σκιά και βάθος */
+.pillar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--luxury-black);
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Απαλή σκιά για highlight */
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: all 0.3s ease; /* Για απαλό εφέ αν περάσει το ποντίκι */
+}
+
+/* Το ποσοστό (Data Tag) πάνω από τον τίτλο */
+.data-tag {
+    color: var(--vogue-gold);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    display: inline-block;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3); /* Μια διακριτική χρυσή υπογράμμιση */
+    margin-bottom: 5px;
+}
+
+/* Στυλ για τα Icons στα Takeaways */
+.summary-list li {
+    display: flex; /* Χρησιμοποιούμε flex για τέλεια στοίχιση */
+    align-items: flex-start;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.summary-list li i {
+    color: var(--vogue-gold);
+    font-size: 1.2rem;
+    margin-right: 20px;
+    margin-top: 5px; /* Μικρή διόρθωση για να είναι στο κέντρο της πρώτης γραμμής */
+    width: 30px; /* Σταθερό πλάτος για να μην κουνιέται το κείμενο */
+    text-align: center;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); /* Μια πολύ ελαφριά σκιά και στα icons */
+}
+
+.summary-list li strong {
+    color: var(--luxury-black);
+    font-weight: 600;
+    margin-right: 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Λεπτό και διακριτικό */
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 9999; /* Για να είναι πάνω από όλα */
+}
+
+#progress-bar {
+    height: 100%;
+    background: #c5a059; /* Το χρυσό σου */
+    width: 0%; /* Ξεκινάει από το μηδέν */
+    transition: width 0.1s ease; /* Για να κινείται ομαλά */
+}
+
+.methodology-tag {
+    font-size: 0.8rem;
+    color: #888;
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 3px solid var(--vogue-gold);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+::selection {
+    background: rgba(197, 160, 89, 0.2); /* Το χρυσό σου με διαφάνεια */
+    color: #000;
+}
+
+/* Future Outlook */
+.future-prediction { margin-top: 40px; padding: 25px; background: #fffaf0; border-left: 3px solid var(--vogue-gold); font-size: 0.95rem; }
+.future-prediction strong { color: var(--vogue-gold); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+
+/* Divider */
+.editorial-divider { text-align: center; margin: 60px 0; position: relative; }
+.editorial-divider::before { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: linear-gradient(to right, transparent, #eee, transparent); }
+.editorial-divider span { background: #fff; padding: 0 20px; position: relative; color: var(--vogue-gold); }
+
+/* Conclusion */
+.editorial-conclusion { padding: 100px 0; border-top: 2px solid #1a1a1a; }
+.conclusion-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 40px; text-align: center; }
+.conclusion-content p { font-size: 1.15rem; max-width: 800px; margin: 0 auto 30px; text-align: justify; }
+
+.chart-container {
+    max-width: 800px; 
+    height: 300px;    
+    margin: 40px auto 100px auto; /* Το 100px είναι το κενό προς τα κάτω */
+    padding: 30px;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.chart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Footer */
+.editorial-footer {
+    border-top: 1px solid #ddd;
+    padding: 60px 0;
+    margin-top: 20px;
+    background-color: #f9f7f2; /* Ίδιο με το background που βάλαμε */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Πηγή και Links */
+.footer-source a {
+    color: var(--vogue-gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Social Media Icons */
+.footer-social {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-social a {
+    color: var(--vogue-gold); /* Χρυσό χρώμα */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-5px); /* Μικρό εφέ κίνησης */
+    color: #a38545; /* Ελαφρώς πιο σκούρο χρυσό στο hover */
+}
+
+/* Credits */
+.footer-credit p {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.expert-stats-clean {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 40px auto 0 auto !important; /* Ταιριάζει με το πλάτος του κειμένου σου */
+    border-top: 1px solid rgba(197, 160, 89, 0.4); /* Λεπτή χρυσή γραμμή πάνω */
+    border-bottom: 1px solid rgba(197, 160, 89, 0.4); /* Λεπτή χρυσή γραμμή κάτω */
+    background: transparent; /* Ενσωματώνεται στο λευκό φόντο */
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif; /* Luxury γραμματοσειρά */
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a; /* Σκούρο γκρι/μαύρο για να κάνει αντίθεση */
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    font-family: 'Montserrat', sans-serif;
+    color: #c5a059; /* Το χρυσό της Vogue για τις ετικέτες */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+}
+
+/* Διακριτικό κάθετο διαχωριστικό ανάμεσα στα νούμερα */
+.stat-item:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Προσαρμογή για κινητά */
+@media (max-width: 768px) {
+    .expert-stats-clean {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .stat-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 20px;
+        width: 80%;
+    }
+}
+
+/* Καθαρό CSS για τα Stats */
+.expert-stats-clean {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 60px 0 !important; /* Λίγο πιο μαζεμένο padding */
+    margin: 40px auto 0 auto !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    border-top: 1px solid rgba(197, 160, 89, 0.4) !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.4) !important;
+    background: white !important;
+}
+
+.stat-item {
+    text-align: center !important;
+    flex: 1 !important;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 3rem !important; /* Ελαφρώς μικρότερο για να μην "κλωτσάει" το % */
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    display: block !important;
+    line-height: 1 !important; /* Κλειδώνει το ύψος για να είναι ίδια */
+    height: 60px !important; /* Δίνει συγκεκριμένο χώρο στον αριθμό */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.stat-label {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #c5a059 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin-top: 10px !important;
+}
+
+/* Διαχωριστικό - μόνο αν το πλάτος είναι μεγάλο */
+.stat-item:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.pillar-image-container {
+    margin: 40px auto;
+    max-width: 800px; /* Λίγο πιο στενό από το κείμενο για κομψότητα */
+    text-align: center;
+}
+
+.pillar-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Κόβει την εικόνα σωστά για να γεμίζει το πλαίσιο */
+    border-radius: 4px;
+    filter: grayscale(20%); /* Ελαφρύ grayscale για πιο σοβαρό ύφος */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.5s ease;
+}
+
+.pillar-image:hover {
+    transform: scale(1.02); /* Μικρό zoom στο hover */
+}
+
+.image-caption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 15px;
 }
