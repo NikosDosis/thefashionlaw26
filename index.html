@@ -1,116 +1,370 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="el">
 <head>
-  <meta charset="utf-8" />
-  <title>Your Headline Here</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Law Report</title>
+
+    <!-- 1. Το σωστό link για τα icons (Έκδοση 6.5.1) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- 2. Η σύνδεση με το CSS σου (Απαραίτητο για να μη χαθεί το design) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
 
-<!-- ── PUBLICATION HEADER ── -->
-<header class="site-header">
-  <p class="publication-name">Your Publication Name</p>
-  <p class="section-label">Section · e.g. Environment</p>
+<header class="editorial-header">
+    <div class="container">
+        <h1 class="main-title">Fashion Law Report</h1>
+        <p class="main-subtitle">Η Χαρτογράφηση των Νομικών Ζητημάτων που Καθόρισαν τη Βιομηχανία της Μόδας τη Διετία 2025-2026</p>
+        <div class="header-ornament">✦</div>
+    </div>
 </header>
 
-<!-- ── ARTICLE ── -->
-<article>
+<main class="container">
+    <!-- ΕΙΣΑΓΩΓΗ: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <section class="editorial-intro">
+        <div class="intro-content">
+            <p><span class="drop-cap">Σ</span>ε μια βιομηχανία που μετασχηματίζεται με καταιγιστικούς ρυθμούς, οι δικαστικές αίθουσες και οι νομοθετικές πρωτοβουλίες αναδεικνύονται στους πραγματικούς διαμορφωτές της στρατηγικής των μεγάλων οίκων. Η παρούσα έρευνα αποτελεί μια <strong>data-driven ανάλυση</strong>, η οποία αποκωδικοποιεί το τοπίο των νομικών ζητημάτων στη μόδα, όπως αυτά εξελίχθηκαν κατά τη διάρκεια του 2025 και του 2026.</p>
 
-  <!-- Article header: headline, deck, byline -->
-  <header class="article-header">
-    <h1>Your Main Headline Goes Here</h1>
-    <p class="deck">A one-sentence summary that draws the reader in. It expands on the headline and tells the reader why this story matters.</p>
-    <p class="byline">
-      By <strong>Your Name</strong>  · 
-      <time datetime="2026-03-04">4 March 2026</time>
-    </p>
-  </header>
+            <p>Μέσα από τη διαδικασία του <strong>web scraping</strong>, αντλήσαμε δεδομένα από <strong>452 άρθρα</strong> του ειδησεογραφικού ιστότοπου <em>"The Fashion Law"</em>, ο οποίος εξειδικεύεται στη νομική πλευρά του κλάδου. Η επεξεργασία και ο καθαρισμός αυτού του dataset μας επέτρεψαν να «ανακρίνουμε» τα δεδομένα και να αναδείξουμε τους τέσσερις κεντρικούς πυλώνες που μονοπώλησαν το ενδιαφέρον της βιομηχανίας τη διετία που διανύσαμε.</p>
 
-  <!-- Hero image -->
-  <figure class="hero">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Acropolis_of_Athens_01361.jpg/800px-Acropolis_of_Athens_01361.jpg"
-      alt="Describe your photo here — who, what, where"
-    />
-    <figcaption>
-      Your photo caption. Include the essential context and a credit.
-      <span class="credit">Photo: Photographer Name / Source</span>
-    </figcaption>
-  </figure>
+            <p>Από την αυστηρή ποινικοποίηση της εταιρικής απάτης μέχρι τις πρωτοφανείς προκλήσεις της Τεχνητής Νοημοσύνης, το 2025 και το 2026 αποτέλεσαν έτη ορόσημα για τη νομική θωράκιση και την ηθική λογοδοσία στον κόσμο της μόδας.</p>
+        </div>
+    </section>
+    <div class="methodology-tag">
+    <i class="fa-solid fa-code"></i>
+    <span><strong>Data Methodology:</strong> Τα στοιχεία αντλήθηκαν μέσω Python scraping από το "The Fashion Law" (2025-2026).</span>
+</div>
+<!-- KEY STRATEGIC TAKEAWAYS WITH ICONS -->
+<!-- ... Τέλος της Εισαγωγής ... -->
+    </section>
 
-  <!-- Body text: section one -->
-  <section>
-    <p class="lead">Your opening paragraph — the most important paragraph in the article. It should answer the key questions: who, what, when, where, why. Make it strong enough to stand alone.</p>
+    <!-- ΕΔΩ ΤΟ ΒΑΖΕΙΣ ΤΩΡΑ -->
+    <section class="executive-summary">
+        <div class="summary-box">
+            <div class="summary-header">
+                <span class="summary-tag">At a Glance</span>
+                <h3>Key Strategic Takeaways</h3>
+            </div>
+            <ul class="summary-list">
+                <li>
+                    <i class="fa-solid fa-gavel"></i> 
+                    <strong>Ποινική Λογοδοσία:</strong> Η μετάβαση από τα εταιρικά πρόστιμα στις προσωπικές διώξεις στελεχών αλλάζει τον χάρτη του Risk Management.
+                </li>
+                <li>
+                    <i class="fa-solid fa-shield-halved"></i> 
+                    <strong>Design Defense:</strong> Η προστασία του Trade Dress αναδεικνύεται σε κρισιμότερο περιουσιακό στοιχείο από το ίδιο το λογότυπο.
+                </li>
+                <li>
+                    <i class="fa-solid fa-leaf"></i> 
+                    <strong>ESG Compliance:</strong> Η βιωσιμότητα παύει να είναι marketing και γίνεται αυστηρή νομική υποχρέωση με τεράστιες οικονομικές κυρώσεις.
+                </li>
+            </ul>
+        </div>
+    </section>
 
-    <p>Your second paragraph expands on the opening. Add context, background, and detail. Link to your <a href="https://example.com" target="_blank" rel="noopener noreferrer">primary source</a> here.</p>
+    <div class="editorial-divider"><span>✦</span></div>
 
-    <p>A third paragraph. Continue developing the story. Add a specific fact or statistic: <strong>42% of respondents</strong> said they supported the measure, according to a poll published on <time datetime="2026-03-01">1 March</time>.</p>
-  </section>
+    <!-- Εδώ ξεκινάει ο Πυλώνας 1 -->
+    <article class="editorial-pillar">
+    <!-- ... -->
 
-  <!-- Pull quote -->
-  <blockquote class="pull-quote">
-    <p>"This is the direct quote from your source. It should be punchy, specific, and newsworthy — not generic."</p>
-    <footer>— Source Name, Title, Organisation</footer>
-  </blockquote>
+    
 
-  <!-- Body text: section two -->
-  <section>
-    <h2>Background</h2>
-    <p>Provide the context your reader needs to understand the story. What led to this moment? What has happened before?</p>
-    <p>Use <em>italics</em> for titles of publications, films, or foreign-language terms. Use <strong>bold</strong> for key terms you are introducing for the first time.</p>
-  </section>
+    <section class="data-visualization">
+    <div class="chart-container">
+        <h3 class="chart-title">Κατανομή Νομικών Ζητημάτων (2025-2026)</h3>
+        <canvas id="pillarChart"></canvas>
+    </div>
+</section>
 
-  <!-- Key facts box -->
-  <aside class="fact-box">
-    <p class="fact-box-title">Key facts</p>
-    <ul>
-      <li>Replace this with a key number or statistic</li>
-      <li>Another important fact from the story</li>
-      <li>A third data point or key date</li>
-    </ul>
-  </aside>
+    <!-- ΠΥΛΩΝΑΣ 1: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <article class="editorial-pillar">
+        <div class="pillar-header">
+            <span class="data-tag">14% του Dataset</span>
+            <h2 class="pillar-title">Ηθική Νομολογία & Ποινική Λογοδοσία</h2>
+        </div>
 
-  <!-- Map or video embed -->
-  <section>
-    <h2>Where It Happened</h2>
-    <p>Use this section for a map, video, or data visualisation that adds context to your story.</p>
+        <div class="editorial-analysis">
+            <p>Η νομική πραγματικότητα της διετίας 2025-2026 σηματοδοτεί το τέλος της εποχής όπου οι εταιρικοί κολοσσοί μπορούσαν να «αγοράζουν» τη συμμόρφωσή τους μέσω εξωδικαστικών συμβιβασμών, οι οποίοι λογίζονταν απλώς ως λειτουργικά έξοδα. Σήμερα, η δικαιοσύνη στρέφει το βλέμμα της στα φυσικά πρόσωπα που λαμβάνουν τις αποφάσεις, καθιερώνοντας την έννοια της <strong>ποινικής λογοδοσίας των ηγετικών στελεχών (C-Suite Liability)</strong>. Η ανάλυση των 452 άρθρων αποκαλύπτει ότι η βιομηχανία της μόδας δεν κρίνεται πλέον μόνο με βάση την εμπορική της επιτυχία, αλλά και με την ικανότητά της να διασφαλίζει την ηθική ακεραιότητα σε όλο το φάσμα της εφοδιαστικής αλυσίδας. Από τον αυστηρό έλεγχο της καταναγκαστικής εργασίας σε 60 διαφορετικές οικονομίες έως την ποινικοποίηση της οικονομικής εξαπάτησης επενδυτών, το νομικό πλαίσιο έχει μετατραπεί σε έναν αμείλικτο ελεγκτικό μηχανισμό. Η νέα αυτή κανονικότητα ορίζει ότι η εταιρική ταυτότητα δεν αποτελεί πλέον ασπίδα προστασίας: η παραβίαση των ανθρωπίνων δικαιωμάτων ή η απόκρυψη οικονομικών οφειλών οδηγεί πλέον σε πολυετείς καθείρξεις, αναγκάζοντας τα brands να επαναπροσδιορίσουν τη στρατηγική τους υπό το πρίσμα της απόλυτης διαφάνειας και της ψυχικής υγείας της νέας γενιάς καταναλωτών.</p>
+            <div class="pillar-image-container">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Retail Ethics and Consumer Trust" class="pillar-image">
+    <p class="image-caption">Defining the new era of digital ethics and brand accountability.</p>
+</div>
+        </div>
 
-    <figure>
-      <!-- Replace with your embed: Google Maps, YouTube, Datawrapper, etc. -->
-      <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=23.70,37.95,23.75,37.99&layer=mapnik"
-        width="100%"
-        height="280"
-        title="Map of the story location"
-        style="border: 1px solid #ddd;">
-      </iframe>
-      <figcaption>Caption for your map or video. Source: OpenStreetMap contributors.</figcaption>
-    </figure>
-  </section>
+        <div class="pillar-content">
+            <div class="legal-insight">
+                <h3>Καταναγκαστική Εργασία & Διεθνής Έλεγχος</h3>
+                <p>Η εφαρμογή του νόμου UFLPA και οι έρευνες σε <strong>60 διαφορετικές οικονομίες</strong> παγκοσμίως δείχνουν ότι οι ΗΠΑ και η ΕΕ σφίγγουν τον κλοιό γύρω από την εφοδιαστική αλυσίδα. Η δικαστική σύγκρουση των κολοσσών <strong>Shein και Temu</strong> αποτέλεσε το επίκεντρο, με κατηγορίες για εξαναγκαστικές πρακτικές που αγγίζουν τα όρια του εκβιασμού.</p>
+            </div>
 
-  <!-- Body text: section three -->
-  <section>
-    <h2>What Happens Next</h2>
-    <p>Your penultimate section. What are the consequences? What will readers want to follow up on? Who will be affected?</p>
-    <p>Add a second quote or a paraphrase of another source's views. Always attribute: <em>according to [source]</em>, or <em>[source] told [publication]</em>.</p>
-  </section>
+            <div class="legal-insight">
+                <h3>Η Πτώση των "C-Level" Στελεχών</h3>
+                <p>Το 2026 σημαδεύτηκε από την καταδίκη της <strong>Christine Hunsicker</strong> (CaaStle) για απάτη <strong>300 εκατομμυρίων δολαρίων</strong>, μια υπόθεση που απέδειξε ότι η παραποίηση οικονομικών στοιχείων οδηγεί πλέον σε πολυετείς καθείρξεις. Αντίστοιχα, η σύλληψη του <strong>Jinwoo Choi</strong> (Blue Elephant) στη Νότια Κορέα για «άδικη απομίμηση» σχεδίων, μετέτρεψε μια διαφορά πνευματικής ιδιοκτησίας σε ποινική υπόθεση κράτησης.</p>
+            </div>
 
-  <!-- Article footer: tags, related links -->
-  <footer class="article-footer">
-    <p class="tags">Tags:
-      <a href="#">Tag One</a>  · 
-      <a href="#">Tag Two</a>  · 
-      <a href="#">Tag Three</a>
-    </p>
-    <p class="corrections">Corrections: If you spot an error, contact corrections@yourpublication.com</p>
-  </footer>
+            <div class="legal-insight">
+                <h3>Οικονομική Ασφυξία & Ψυχική Υγεία</h3>
+                <p>Η χρεοκοπία της <strong>Saks Global</strong> τον Ιανουάριο του 2026 ανέδειξε την ευθραυστότητα του κλάδου, αφήνοντας απλήρωτους προμηθευτές με οφειλές <strong>600 εκατομμυρίων δολαρίων</strong>. Παράλληλα, η ιστορική καταδίκη της <strong>Meta</strong> και του <strong>YouTube</strong> για τον εθιστικό σχεδιασμό των πλατφορμών τους, έθεσε για πρώτη φορά τη βιομηχανία προ των ευθυνών της για την ψυχική υγεία των ανήλικων χρηστών.</p>
+            </div>
+        </div>
 
-</article>
+        <div class="future-prediction">
+            <p><strong>Future Outlook 2027:</strong> Αναμένεται αυστηροποίηση των ελέγχων στις "Digital Supply Chains", με την ΕΕ να εισάγει ψηφιακά διαβατήρια προϊόντων για την πλήρη ιχνηλασιμότητα των εργασιακών συνθηκών.</p>
+        </div>
+    </article>
 
-<!-- ── PAGE FOOTER ── -->
-<footer class="page-footer">
-  <p>Your Publication Name  ·  All rights reserved  ·  <time datetime="2026">2026</time></p>
+
+    <div class="editorial-divider"><span>✦</span></div>
+
+    <!-- ΠΥΛΩΝΑΣ 2: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <article class="editorial-pillar">
+        <div class="pillar-header">
+            <span class="data-tag">58% του Dataset</span>
+            <h2 class="pillar-title">Πνευματική Ιδιοκτησία & Η Προστασία της Ταυτότητας</h2>
+        </div>
+
+        <div class="editorial-analysis">
+            <p>Η ανάλυση του μεγαλύτερου μέρους του dataset (58,4%) αποκαλύπτει ότι η μάχη για την πνευματική ιδιοκτησία έχει μετατοπιστεί από την απλή προστασία ενός λογοτύπου στη συνολική θωράκιση της αισθητικής ταυτότητας ενός προϊόντος. Η διετία 2025-2026 ανέδειξε το <strong>"Trade Dress"</strong> ως το ισχυρότερο νομικό όπλο των μεγάλων οίκων, αναγνωρίζοντας ότι το σχήμα, η μορφή και η οπτική εμπειρία ενός αντικειμένου αποτελούν αυθεντική περιουσία που δικαιούται προστασία έναντι των απομιμήσεων. Ωστόσο, η νομολογία θέτει έναν κρίσιμο περιορισμό: τη <strong>λειτουργικότητα</strong>. Τα δικαστήρια καλούνται πλέον να διακρίνουν αν ένας σχεδιασμός είναι καθαρά αισθητικός ή αν εξυπηρετεί πρακτικούς σκοπούς, διασφαλίζοντας ότι η προστασία της καινοτομίας δεν θα μετατραπεί σε αθέμιτο μονοπώλιο που πνίγει τον ανταγωνισμό στην παγκόσμια αγορά.</p>
+            <div class="pillar-image-container">
+    <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1000&q=80" alt="Hermès Kelly" class="pillar-image">
+    <p class="image-caption">The Kelly Legacy: Safeguarding the trapezoid silhouette and singular handle heritage.</p>
+</div>
+        </div>
+
+        <div class="pillar-content">
+            <div class="legal-insight">
+                <h3>Η "Θωράκιση" της Αισθητικής Ταυτότητας</h3>
+                <p>Η δικαιοσύνη έστειλε ηχηρά μηνύματα κατά των παραποιήσεων, με τη <strong>Nike</strong> να κερδίζει αποζημίωση <strong>$11 εκατομμυρίων</strong>, κατοχυρώνοντας ότι το συνολικό σχήμα και η μορφή ενός προϊόντος αποτελούν προστατευόμενη περιουσία. Παράλληλα, η <strong>Chanel</strong> ενίσχυσε τη θέση της κατά της δευτερογενούς αγοράς, ενώ η <strong>Estée Lauder</strong> στράφηκε κατά της <strong>Walmart</strong> για τη διευκόλυνση πώλησης απομιμήσεων μέσω της πλατφόρμας της.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Το Νομικό "Κενό" της Τεχνητής Νοημοσύνης</h3>
+                <p>Μια από τις πιο ενδιαφέρουσες τάσεις που "ανακρίθηκαν" στο dataset είναι η αυστηρή στάση των αρχών απέναντι στο AI. Το Γραφείο Πνευματικής Ιδιοκτησίας των ΗΠΑ ξεκαθάρισε ότι έργα χωρίς ανθρώπινη παρέμβαση δεν δικαιούνται πνευματικά δικαιώματα, ενώ εταιρείες όπως η <strong>Pandora</strong> αμφισβήτησαν τη μονοπώληση κοινών συμβόλων.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Trade Dress & Λειτουργικότητα</h3>
+                <p>Η διετία 2025-2026 έθεσε όρια στην προστασία των σχεδίων. Η περίπτωση της <strong>Sol de Janeiro</strong>, η οποία έχασε την προστασία για το εμβληματικό βάζο της επειδή κρίθηκε «λειτουργικό», αποδεικνύει ότι η νομική στρατηγική πρέπει να ισορροπεί ανάμεσα στο design και τη χρηστικότητα.</p>
+            </div>
+        </div>
+
+        <div class="future-prediction">
+            <p><strong>Future Outlook 2027:</strong> Η νομική μάχη μεταφέρεται στα "Generative Design Tools". Οι οίκοι μόδας θα επιδιώξουν να κατοχυρώσουν αλγοριθμικά μοτίβα ως Trade Dress, προκαλώντας μια νέα σύγκρουση για το τι ορίζεται ως "ανθρώπινη έμπνευση".</p>
+        </div>
+    </article>
+
+    <div class="editorial-divider"><span>✦</span></div>
+
+    <!-- ΠΥΛΩΝΑΣ 3: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <article class="editorial-pillar">
+        <div class="pillar-header">
+            <span class="data-tag">28% του Dataset</span>
+            <h2 class="pillar-title">Επιχειρηματική Στρατηγική & Η Νέα Περιβαλλοντική Λογοδοσία</h2>
+        </div>
+
+        <div class="editorial-analysis">
+            <p>Το 27,7% της θεματολογίας καταγράφει τη βίαιη μετάβαση της βιομηχανίας από την προαιρετική βιωσιμότητα στην αναγκαστική νομική συμμόρφωση. Το 2025 και το 2026 αποτέλεσαν έτη-σταθμούς, καθώς οι αρχές μετέτρεψαν τις αρχές του <strong>ESG (Περιβάλλον, Κοινωνία, Εταιρική Διακυβέρνηση)</strong> από εργαλείο δημοσίων σχέσεων σε αυστηρό κανονιστικό πλαίσιο με δυσβάσταχτα πρόστιμα. Η εισαγωγή της <strong>Διευρυμένης Ευθύνης του Παραγωγού (EPR)</strong> και η απαγόρευση τοξικών ουσιών αναγκάζουν τα brands σε έναν ριζικό και κοστοβόρο επανασχεδιασμό της στρατηγικής τους. Παράλληλα, οι αντιμονοπωλιακοί έλεγχοι στις μεγάλες συγχωνεύσεις (M&A) υπογραμμίζουν ότι η επιχειρηματική γιγάντωση δεν μπορεί πλέον να συμβαίνει ανεξέλεγκτα, αλλά πρέπει να ισορροπεί ανάμεσα στην κερδοφορία και τη διασφάλιση της δίκαιης λειτουργίας της αγοράς.</p>
+          <div class="pillar-image-container">
+    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="Sustainable Materials" class="pillar-image">
+    <p class="image-caption">Material Traceability: Implementing circular economy standards and environmental accountability in textile production.</p>
+</div>
+
+        <div class="pillar-content">
+            <div class="legal-insight">
+                <h3>Η Μεγάλη Ανακατάταξη (M&A)</h3>
+                <p>Οι συγχωνεύσεις και εξαγορές κυριάρχησαν στην ατζέντα, με την πιθανή συνένωση <strong>Estée Lauder και Puig</strong> να αναδεικνύει την ανάγκη για επιχειρηματικό μέγεθος ως μέσο επιβίωσης. Παράλληλα, η δικαστική ακύρωση της συγχώνευσης <strong>Tapestry/Capri</strong> ύψους $8,5 δισ. λόγω αντιμονοπωλιακών ανησυχιών, έθεσε νέα όρια στην επέκταση των ομίλων πολυτελείας.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Η "Πράσινη" Συμμόρφωση</h3>
+                <p>Το 2026 αποτέλεσε το έτος της οριστικής απαγόρευσης των <strong>PFAS</strong> ("παντοτινά χημικά") σε κρίσιμες αγορές, αναγκάζοντας τα brands σε ριζικό επανασχεδιασμό της παραγωγής τους. Ταυτόχρονα, οι νέοι κανόνες <strong>EPR</strong> στην Καλιφόρνια επιβάλλουν στις εταιρείες το πλήρες κόστος ανακύκλούσης των προϊόντων τους, με την απειλή προστίμων έως $50.000 την ημέρα.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Οικονομική Εξυγίανση & Retail</h3>
+                <p>Η αίτηση πτώχευσης της <strong>Saks Global</strong> τον Ιανουάριο του 2026 σηματοδότησε το τέλος μιας εποχής για τα παραδοσιακά πολυκαταστήματα. Η ανάλυση δείχνει ότι η οικονομική πίεση οδηγεί σε μια βίαιη αλλά απαραίτηρη αναδιάρθρωση του retail τοπίου, με στόχο τη μακροπρόθεσμη βιωσιμότητα.</p>
+            </div>
+        </div>
+
+        <div class="future-prediction">
+            <p><strong>Future Outlook 2027:</strong> Το Greenwashing θα πάψει να είναι αστικό αδίκημα και θα αντιμετωπίζεται ως οικονομική απάτη. Brands που δεν μπορούν να αποδείξουν τους ισχυρισμούς τους με δεδομένα blockchain θα αντιμετωπίζουν αποκλεισμό από τις ευρωπαϊκές αγορές.</p>
+        </div>
+    </article>
+
+    <div class="editorial-divider"><span>✦</span></div>
+
+    <!-- ΠΥΛΩΝΑΣ 4: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <article class="editorial-pillar">
+        <div class="pillar-header">
+            <span class="data-tag">18% του Dataset</span>
+            <h2 class="pillar-title">Τεχνολογική Επιτάχυνση & Ψηφιακή Ηθική</h2>
+        </div>
+
+        <div class="editorial-analysis">
+            <p>Στο κλείσιμο της ανάλυσής μας, η τεχνολογία αναδεικνύεται ως ο απόλυτος καταλύτης αλλαγών, δημιουργώντας νομικά κενά που η παγκόσμια νομοθεσία πασχίζει να καλύψει. Η ανάδυση του <strong>Agentic AI</strong>—λογισμικών που δρουν αυτόνομα και συνάπτουν εμπορικές συμφωνίες—επαναπροσδιορίζει την έννοια της νομικής ευθύνης στον ψηφιακό κόσμο. Η δικαιοσύνη καλείται πλέον να αποφασίσει ποιος φέρει το βάρος των σφαλμάτων: ο δημιουργός του αλγορίθμου, η πλατφόρμα ή ο τελικός χρήστης; Ταυτόχρονα, οι διαρκείς διαρροές δεδομένων και η καταδίκη των social media για τον εθιστικό σχεδιασμό τους καθιστούν την ψηφιακή ηθική και την κυβερνοασφάλεια ως τους κεντρικούς πυλώνες πάνω στους οποίους θα οικοδομηθεί η εμπιστοσύνη των καταναλωτών στη νέα ψηφιακή εποχή.</p>
+            <div class="pillar-image-container">
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80" alt="Digital Ethics and AI" class="pillar-image">
+    <p class="image-caption">Digital ethics: Establishing the framework for algorithmic accountability and data transparency.</p>
+</div>
+        </div>
+
+        <div class="pillar-content">
+            <div class="legal-insight">
+                <h3>Agentic AI & Αυτοματοποιημένο Εμπόριο</h3>
+                <p>Η ανάδυση των AI agents δημιούργησε νέα νομικά προηγούμενα, με τη διαμάχη <strong>Amazon vs. Perplexity</strong> να θέτει όρια στην αυτονομία των bots. Τα δεδομένα υποδεικνύουν ότι η τεχνητή νοημοσύνη θα διαδραματίζει καθοριστικό ρόλο στις online αγορές μέσα στην επόμενη πενταετία.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Cybersecurity & Η Αξία της Ιδιωτικότητας</h3>
+                <p>Οι σημαντικές διαρροές δεδομένων σε κολοσσούς όπως η <strong>Nike</strong> και τα αυστηρά πρόστιμα σε οίκους όπως οι <strong>Louis Vuitton και Dior</strong>, υπογραμμίζουν ότι η κυβερνοασφάλεια αποτελεί πλέον κρίσιμο παράγοντα εταιρικής εμπιστοσύνης και νομικής συμμόρφωσης.</p>
+            </div>
+
+            <div class="legal-insight">
+                <h3>Η Ευθύνη των Social Media</h3>
+                <p>Η καταδίκη της <strong>Meta και του YouTube</strong> για τον εθιστικό σχεδιασμό των πλατφορμών τους αναδιαμορφώνει το ψηφιακό marketing. Ταυτόχρονα, η αυστηροποίηση των κανόνων για τα πνευματικά δικαιώματα στα social media θέτει νέα όρια στην εμπορική δημιουργικότητα.</p>
+            </div>
+        </div>
+
+        <div class="future-prediction">
+            <p><strong>Future Outlook 2027:</strong> Η εμφάνιση των "Personal AI Shoppers" θα αναγκάσει τα brands να επανασχεδιάσουν τους όρους χρήσης τους (T&Cs), καθώς οι συμφωνίες αγοράς θα κλείνονται μεταξύ αλγορίθμων χωρίς την άμεση παρέμβαση του καταναλωτή.</p>
+        </div>
+    </article>
+
+    <section class="interactive-cards">
+    <h2 class="section-title">Strategic Impact Radar</h2>
+    <div class="cards-grid">
+        <!-- Κάρτα 1 -->
+        <div class="impact-card">
+            <div class="card-inner">
+                <i class="fa-solid fa-eye"></i>
+                <h4>Transparency</h4>
+                <p class="hover-text">Η ιχνηλασιμότητα μέσω Blockchain γίνεται το νέο standard για την ΕΕ το 2027.</p>
+            </div>
+        </div>
+        <!-- Κάρτα 2 -->
+        <div class="impact-card">
+            <div class="card-inner">
+                <i class="fa-solid fa-robot"></i>
+                <h4>AI Ethics</h4>
+                <p class="hover-text">Οι αλγόριθμοι πλέον φέρουν νομική ευθύνη για μεροληπτικές αποφάσεις αγορών.</p>
+            </div>
+        </div>
+        <!-- Κάρτα 3 -->
+        <div class="impact-card">
+            <div class="card-inner">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h4>IP Vigilance</h4>
+                <p class="hover-text">Το Trade Dress προστατεύει το "vibe" του brand, όχι μόνο το logo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ΣΥΜΠΕΡΑΣΜΑ: ΟΛΟ ΤΟ ΚΕΙΜΕΝΟ ΣΟΥ -->
+    <section class="editorial-conclusion">
+        <div class="conclusion-header">
+            <h2 class="conclusion-title">Επίλογος</h2>
+        </div>
+        <div class="conclusion-content">
+            <p>Η χαρτογράφηση της διετίας 2025-2026 αποδεικνύει αδιαμφισβήτητα ότι η νομική επιστήμη δεν αποτελεί πλέον μια απλή υποστηρικτική λειτουργία, αλλά τον κεντρικό πυλώνα πάνω στον οποίο οικοδομείται το μέλλον της μόδας. Η μετάβαση από την «εθελοντική ηθική» στην «υποχρεωτική λογοδοσία» αναδιαμορφώνει πλήρως τους κανόνες του παιχνιδιού, επιβάλλοντας στα brands μια νέα μορφή επιχειρηματικής ευφυΐας.</p>
+            <p>Σε έναν κόσμο όπου η Τεχνητή Νοημοσύνη αμφισβητεί την έννοια της δημιουργίας και οι περιβαλλοντικοί περιορισμοί θέτουν όρια στην ανάπτυξη, η επιβίωση των μεγάλων οίκων εξαρτάται από την ικανότητά τους να πλοηγηθούν με ακρίβεια ανάμεσα στη νομοθετική αυστηρότητα και την καινοτομία. Το Fashion Law Report 2026 δεν καταγράφει απλώς δικαστικές αποφάσεις, αλλά την ανατολή μιας νέας εποχής, όπου η διαφάνεια, η πνευματική θωράκιση και η ψηφιακή ηθική αποτελούν τα μοναδικά διαβατήρια για τη μακροπρόθεσμη βιωσιμότητα και την εμπιστοσύνη του παγκόσμιου καταναλωτή.</p>
+        </div>
+    </section>
+    <section class="expert-stats-clean" style="color: #1a1a1a !important; background: white !important;">
+    <div class="stat-item">
+        <span class="stat-number" style="color: #1a1a1a !important; display: block;">452</span>
+        <span class="stat-label" style="color: #c5a059 !important; display: block;">Articles Scanned</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" style="color: #1a1a1a !important; display: block;">128</span>
+        <span class="stat-label" style="color: #c5a059 !important; display: block;">Legal Verdicts</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" style="color: #1a1a1a !important; display: block;">95%</span>
+        <span class="stat-label" style="color: #c5a059 !important; display: block;">Accuracy Rate</span>
+    </div>
+</section>
+
+</main>
+
+<footer class="editorial-footer">
+    <div class="footer-content">
+        <div class="footer-source">
+            <p>Πηγή Δεδομένων: <a href="https://www.thefashionlaw.com" target="_blank">The Fashion Law</a></p>
+            <p>&copy; 2026 Fashion Law Data Report</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/nikolas-dosis" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/sp.dosis" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:nikosdoshs@gmail.com" title="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        
+        <div class="footer-credit">
+            <p>Επιμέλεια: <strong>Nikolas Dosis</strong></p>
+        </div>
+    </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('pillarChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar', 
+    data: {
+        labels: ['Πνευματική Ιδιοκτησία', 'Επιχειρηματική Στρατηγική', 'Τεχνολογία & AI', 'Ηθική & Ποινική Λογοδοσία'],
+        datasets: [{
+            label: '% του Dataset',
+            data: [58.4, 27.7, 18.1, 13.9],
+            backgroundColor: '#c5a059', // Χρυσό για luxury αίσθηση
+            barThickness: 20, // Πιο λεπτές μπάρες για κομψότητα
+        }]
+    },
+    options: {
+        indexAxis: 'y', // Αυτό το κάνει οριζόντιο/παραλληλόγραμμο
+        responsive: true,
+        maintainAspectRatio: false, // Επιτρέπει στο γράφημα να είναι στενό
+        plugins: {
+            legend: { display: false } // Κρύβουμε το label για καθαρό design
+        },
+        scales: {
+            x: {
+                grid: { display: false },
+                ticks: { font: { family: 'Montserrat', size: 10 } }
+            },
+            y: {
+                grid: { display: false },
+                ticks: { font: { family: 'Montserrat', size: 11, weight: '600' } }
+            }
+        }
+    }
+});
+</script>
+<script>
+window.onscroll = function() {
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+}
+
+</script>
 
 </body>
 </html>
